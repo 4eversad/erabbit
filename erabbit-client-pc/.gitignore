@@ -2,8 +2,7 @@
 node_modules
 /dist
 .txt
-
-
+.gitignore
 
 
 # local env files
