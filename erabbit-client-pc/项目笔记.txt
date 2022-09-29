@@ -1,0 +1,35 @@
+1. 样式渗透: :deep(子组件的类...) {样式} 在goods-relevant中有
+2. v-model的知识在xtx-checkbox和xtx-numbox中有
+3. 孙组件使用父组件的数据注入和依赖: provide('使用时的变量名', 变量) inject('使用时的变量名')即可使用
+4. VNode方法将vue的模板编译成虚拟节点 VNode(组件, 属性(即props))
+5. 挂载原型的方法: app.config.globalProperties.方法 = xxx(例如函数)
+6. vue拿app实例的方法: const {proxy} = getCurrentInstance() app拿到的是应用实例, 需要解构出里面的proxy
+7. QQ解绑: http://pcapi-xiaotuxian-front-devtest.itheima.net/login/social/unbind?mobile=.....
+8. 不能将数据和vuex里的数据双向绑定(v-model), 因为组件不能修改vuex的值,只读,所以只能用:modelValue先赋值, 然后再
+通知mutations修改vuex的值
+9. teleport
+
+需要复盘的疑难点:
+async和await怎么用  √
+find/filter/map返回的都是什么数据(对象or数组?)及作用 √
+v-model的使用 √
+函数传参 对象
+ES6解构语法 √
+promise  √
+vuex的module用法 √
+作用域插槽
+app实例 √
+MVVM √
+路由地址等问题
+
+bug合集:
+1. 写错位置(把components写在了prop里面)
+2. 写漏符号 @click的@
+3. 拼写错误
+4. 组件没导入
+5. 没有return提供给模板使用
+6. 插件版本问题
+7. 使用响应式数据时忘记.value
+8. Uncaught (in promise) TypeError: Assignment to constant variable. 可能就是忘记加value了
+hahha
+
